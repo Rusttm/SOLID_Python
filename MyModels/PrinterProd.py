@@ -5,7 +5,7 @@ class PrinterProd(ProdMainClass):
 
     def __init__(self, **kwargs):
         super().__init__()
-        PrinterProd.id = super().get_prod_id()
+        self.id = PrinterProd.id = super().get_prod_id()
         self.prod = dict()
         """ продукт в виде словаря"""
         self.prod.update(kwargs)
@@ -14,6 +14,9 @@ class PrinterProd(ProdMainClass):
     def get_prod_dict(self):
         """ метод выдает продукт в виде словаря"""
         return self.prod
+
+    def get_prod_id(self):
+        return self.id
 
 
 if __name__ == "__main__":

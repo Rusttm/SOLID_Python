@@ -9,5 +9,5 @@ class ProdMainClass(object):
 
 
     def get_prod_id(self):
-        """ выдает значение ID обхекта"""
+        """ выдает значение ID обЪекта"""
         return ProdMainClass.id
