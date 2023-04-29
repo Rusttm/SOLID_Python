@@ -16,8 +16,6 @@ class PrinterProd(ProdMainClass):
         return self.prod
 
 
-
-
 if __name__ == "__main__":
     newPrinter1 = PrinterProd(name="Ecosys", model="P2040", brand="Kyosera", price="55000")
     newPrinter2 = PrinterProd(name="LaserJet", model="M111A", brand="HP", price="14000")
