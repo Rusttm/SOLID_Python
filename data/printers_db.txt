@@ -1,0 +1,4 @@
+name:Ecosys;model:P2040;brand:Kyosera;price:55000;id:4;
+name:Ecosys;model:P2040;brand:Kyosera;price:55000;id:4;
+
+name:Ecosys;model:P2040;brand:Kyosera;price:55000;

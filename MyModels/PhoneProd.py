@@ -21,6 +21,8 @@ class PhoneProd(ProdMainClass):
         return self.id
 
 
+
+
 if __name__ == "__main__":
     newPhone1 = PhoneProd(name="iPhone", model="SE", brand="Apple", year="2015", memory="64", descr="refurbished", price="52000")
     newPhone2 = PhoneProd(name="iPhone", model="13 Pro Max", brand="Apple", year="2020", memory="256", descr="new", price="125000")

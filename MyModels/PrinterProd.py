@@ -4,19 +4,12 @@ from MyModels.ProdMainClass import ProdMainClass
 class PrinterProd(ProdMainClass):
 
     def __init__(self, **kwargs):
-        super().__init__()
+        super().__init__(**kwargs)
         self.id = PrinterProd.id = super().get_prod_id()
-        self.prod = dict()
-        """ продукт в виде словаря"""
-        self.prod.update(kwargs)
         self.prod.update(id=PrinterProd.id)
+        self.prod.update(label=self.get_prod_label("name", "model"))
 
-    def get_prod_dict(self):
-        """ метод выдает продукт в виде словаря"""
-        return self.prod
 
-    def get_prod_id(self):
-        return self.id
 
 
 if __name__ == "__main__":
