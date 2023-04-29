@@ -8,6 +8,6 @@ class ProdMainClass(object):
         # print(f" Super id {ProdMainClass.id}")
 
 
-    def getProdID(self):
+    def get_prod_id(self):
         """ выдает значение ID обхекта"""
         return ProdMainClass.id
