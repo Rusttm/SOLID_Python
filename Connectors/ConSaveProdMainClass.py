@@ -7,7 +7,12 @@ class SaveConnectorMain(object):
         """ запоминает имя файла"""
 
     def get_file_name(self):
+        """ возвращает путь к файлу """
         return self.file_name
+
+    def save_prod_2file(self, obj):
+        """ метод записыват продукт(объект) в файл"""
+        pass
 
 
 

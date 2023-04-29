@@ -1,0 +1,1 @@
+name:iPhone;model:13 Pro Max;brand:Apple;year:2020;memory:256;descr:new;price:125000;id:2;
