@@ -2,6 +2,7 @@
 from MyModels.PhoneProd import PhoneProd
 from MyModels.PrinterProd import PrinterProd
 from Connectors.ConSavePhone import ConSavePhone
+from Connectors.ConSavePhoesArray import ConSavePhonesArray
 
 class MainController(object):
 
@@ -15,11 +16,26 @@ class MainController(object):
         printer1 = PrinterProd(name="Ecosys", model="P2040", brand="Kyosera", price="55000")
         printer2 = PrinterProd(name="LaserJet", model="M111A", brand="HP", price="14000")
         printer3 = PrinterProd(name="ImageClass", model="LBP6030", brand="Canon", price="23000")
+
+        # можем  выдать продукт(объекта) в виде словаря
         print(printer2.get_prod_dict())
 
-        # phone_conn = ConSavePhone("phones_db.txt")
-        # phone_conn.save_prod_2file(phone2)
-        # print(printer2.get_prod_id())
+        # можем получить ID продукта(объекта)
+        print(printer2.get_prod_id())
+
+        # можно записать один телефон
+        phone_conn = ConSavePhone("phones_db.txt")
+        phone_conn.save_prod_2file(phone2)
+
+        # или записать массив телефонов
+        phones_array = [phone1, phone2, phone3]
+        phones_array_conn = ConSavePhonesArray("phones_db.txt")
+        phones_array_conn.save_prod_array_2file(phones_array)
+
+
+
+
+
         #
         # printer_conn = ConSavePhone("printers_db.txt", append=True)
         # printer_conn.save_prod_2file(printer1)

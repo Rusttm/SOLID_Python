@@ -8,17 +8,10 @@ class PhoneProd(ProdMainClass):
     def __init__(self, **kwargs):
         super().__init__()
         self.id = PhoneProd.id = super().get_prod_id()
-        self.prod = dict()
-        """ продукт в виде словаря"""
-        self.prod.update(kwargs)
         self.prod.update(id=PhoneProd.id)
-
-    def get_prod_dict(self):
-        """ метод выдает продукт в виде словаря"""
-        return self.prod
-
-    def get_prod_id(self):
-        return self.id
+        print(self.prod)
+        print(super().get_prod_dict())
+        self.prod.update(label=self.get_prod_label("name", "model", "brand"))
 
 
 
