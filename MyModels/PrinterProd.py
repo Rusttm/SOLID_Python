@@ -7,10 +7,12 @@ class PrinterProd(ProdMainClass):
         super().__init__()
         PrinterProd.id = super().get_prod_id()
         self.prod = dict()
+        """ продукт в виде словаря"""
         self.prod.update(kwargs)
         self.prod.update(id=PrinterProd.id)
 
     def get_prod_dict(self):
+        """ метод выдает продукт в виде словаря"""
         return self.prod
 
 
