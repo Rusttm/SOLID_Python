@@ -2,11 +2,14 @@ import AbstractConnector
 
 
 class SaveConnector(AbstractConnector):
-    id = 0
 
-    def __init__(self, nameFile):
-        self.id += 1
-        self.nameFile = nameFile
+    def __init__(self, file_name):
+        self.file_name = file_name
+        """ запоминает имя файла"""
+
+    def get_file_name(self):
+        return self.file_name
+
 
 
 
