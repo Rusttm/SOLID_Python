@@ -1,7 +1,6 @@
-import AbstractConnector
 
-
-class SaveConnector(object):
+class SaveConnectorMain(object):
+    """ суперкласс для записи данных в файл"""
 
     def __init__(self, file_name):
         self.file_name = file_name

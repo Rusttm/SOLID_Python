@@ -1,10 +1,13 @@
 class ProdMainClass(object):
+    """ суперкласс для объектов (продуктов)
+    должен уметь выдавать ID"""
     id = 0
 
     def __init__(self):
         ProdMainClass.id += 1
-        print(f" Super id {ProdMainClass.id}")
+        # print(f" Super id {ProdMainClass.id}")
 
 
     def getProdID(self):
-        return self.id
+        """ выдает значение ID обхекта"""
+        return ProdMainClass.id
