@@ -1,0 +1,1 @@
+label:;id:4;brand:Apple;name:iPhone;model:6s;memory:64;

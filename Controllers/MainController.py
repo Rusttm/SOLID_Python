@@ -58,7 +58,9 @@ class MainController(object):
             else:
                 print("Товар не записан")
                 quit()
-        phone_conn.save_prod_2file(new_phone)
+        phone_conn_append = ConSavePhone("new_phones.txt", append=True)
+        phone_conn_append.save_prod_2file(new_phone)
+        print(f"Новый телефон {new_phone.get_prod_dict()} записан")
 
 
 
