@@ -2,7 +2,7 @@ from Connectors.ConSaveArrayMainClass import ConSaveArrayMainClass
 
 
 
-class ConSavePhonesArray(ConSaveArrayMainClass):
+class ConSavePrintersArray(ConSaveArrayMainClass):
     """ класс коннектора для записи массива телефонов в файл"""
 
     def __init__(self, file_name, append=True):

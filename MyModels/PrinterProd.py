@@ -1,13 +1,15 @@
 from MyModels.ProdMainClass import ProdMainClass
+from MyModels.ProdLabelMainClass import ProdLabelMainClass
 
 
-class PrinterProd(ProdMainClass):
+class PrinterProd(ProdLabelMainClass):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.id = PrinterProd.id = super().get_prod_id()
         self.prod.update(id=PrinterProd.id)
-        self.prod.update(label=self.get_prod_label("name", "model"))
+        self.set_prod_label("name", "model")
+
 
 
 

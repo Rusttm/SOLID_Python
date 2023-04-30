@@ -1,1 +1,4 @@
-name:iPhone;model:13 Pro Max;brand:Apple;year:2020;memory:256;descr:new;price:125000;id:2;
+name:iPhone;model:13 Pro Max;brand:Apple;year:2020;memory:256;descr:new;price:125000;label:Apple iPhone 13 Pro Max;id:2;
+name:iPhone;model:SE;brand:Apple;year:2015;memory:64;descr:refurbished;price:52000;label:Apple iPhone SE;id:1;
+name:iPhone;model:13 Pro Max;brand:Apple;year:2020;memory:256;descr:new;price:125000;label:Apple iPhone 13 Pro Max;id:2;
+name:Redmi;model:MI9;brand:Xiaomi;year:2018;memory:64;descr:;price:11000;label:Xiaomi Redmi MI9;id:3;

@@ -32,14 +32,15 @@ class MainController(object):
         phones_array_conn = ConSavePhonesArray("phones_db.txt")
         phones_array_conn.save_prod_array_2file(phones_array)
 
+        # то же касается и принтеров
+        # запись одного принтера
+        printer_conn = ConSavePhone("printers_db.txt")
+        printer_conn.save_prod_2file(printer1)
 
-
-
-
-        #
-        # printer_conn = ConSavePhone("printers_db.txt", append=True)
-        # printer_conn.save_prod_2file(printer1)
-
+        # запись массива принтеров
+        printers_array = [printer2,  printer3]
+        printers_array_conn = ConSavePhonesArray("printers_db.txt")
+        printers_array_conn.save_prod_array_2file(printers_array)
 
 
 if __name__ == "__main__":

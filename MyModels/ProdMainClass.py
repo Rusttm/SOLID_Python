@@ -3,8 +3,6 @@ class ProdMainClass(object):
     должен уметь выдавать
     get_prod_id : ID
     get_prod_dict: сам продукт в виде словаря
-    get_prod_label: название, которое указывается при инициализации
-
     """
     id = 0
 
@@ -14,30 +12,16 @@ class ProdMainClass(object):
         """
         self.prod = dict()
         """ продукт в виде словаря"""
-        ProdMainClass.id += 1
+        # ProdMainClass.id += 1
+        self.id += 1
         self.prod.update(kwargs)
-        self.prod.update(label="")
-        # self.prod.update(id=PrinterProd.id)
-        # print(f" Super id {ProdMainClass.id}")
+        self.prod.update(label="No Label")
+
 
     def get_prod_id(self):
         """ выдает значение ID обЪекта"""
-        return ProdMainClass.id
+        return self.id
 
     def get_prod_dict(self):
         """ метод выдает продукт в виде словаря"""
         return self.prod
-
-    def get_prod_label(self):
-        """ возвращает значение label"""
-        return self.prod["label"]
-
-    def set_prod_label(self, *args):
-        """ метод получает список ключей по которым формируется label"""
-        label = ""
-        if len(args) != 0:
-            for key in args:
-                label += str(self.prod[key]) + " "
-        self.prod["label"] = label
-
-
