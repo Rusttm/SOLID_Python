@@ -1,9 +1,9 @@
-
 from MyModels.PhoneProd import PhoneProd
 from MyModels.PrinterProd import PrinterProd
 from Connectors.ConSavePhone import ConSavePhone
 from Connectors.ConSavePhoesArray import ConSavePhonesArray
 from Controllers.ControllerCreatePhoneView import ControllerCreatePhoneView
+
 
 class MainController(object):
     """ класс главного контроллера"""
@@ -11,11 +11,11 @@ class MainController(object):
     def runProgram(self):
         """ запуск программы"""
         phone1 = PhoneProd(name="iPhone", model="SE", brand="Apple", year="2015", memory="64", descr="refurbished",
-                              price="52000")
+                           price="52000")
         phone2 = PhoneProd(name="iPhone", model="13 Pro Max", brand="Apple", year="2020", memory="256", descr="new",
-                              price="125000")
+                           price="125000")
         phone3 = PhoneProd(name="Redmi", model="MI9", brand="Xiaomi", year="2018", memory="64", descr="",
-                              price="11000")
+                           price="11000")
         printer1 = PrinterProd(name="Ecosys", model="P2040", brand="Kyosera", price="55000")
         printer2 = PrinterProd(name="LaserJet", model="M111A", brand="HP", price="14000")
         printer3 = PrinterProd(name="ImageClass", model="LBP6030", brand="Canon", price="23000")
@@ -41,7 +41,7 @@ class MainController(object):
         printer_conn.save_prod_2file(printer1)
 
         # запись массива принтеров
-        printers_array = [printer2,  printer3]
+        printers_array = [printer2, printer3]
         printers_array_conn = ConSavePhonesArray("printers_db.txt")
         printers_array_conn.save_prod_array_2file(printers_array)
 
