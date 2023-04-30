@@ -3,10 +3,13 @@ from MyModels.PhoneProd import PhoneProd
 from MyModels.PrinterProd import PrinterProd
 from Connectors.ConSavePhone import ConSavePhone
 from Connectors.ConSavePhoesArray import ConSavePhonesArray
+from Controllers.ControllerCreatePhoneView import ControllerCreatePhoneView
 
 class MainController(object):
+    """ класс главного контроллера"""
 
     def runProgram(self):
+        """ запуск программы"""
         phone1 = PhoneProd(name="iPhone", model="SE", brand="Apple", year="2015", memory="64", descr="refurbished",
                               price="52000")
         phone2 = PhoneProd(name="iPhone", model="13 Pro Max", brand="Apple", year="2020", memory="256", descr="new",
@@ -41,6 +44,22 @@ class MainController(object):
         printers_array = [printer2,  printer3]
         printers_array_conn = ConSavePhonesArray("printers_db.txt")
         printers_array_conn.save_prod_array_2file(printers_array)
+
+        # есть View для создания телефона
+        create_controller = ControllerCreatePhoneView()
+        new_phone = PhoneProd()
+        req_fields = new_phone.get_requred_fields()
+        for key in req_fields:
+            create_controller.add_info(f"Телефон {new_phone.get_prod_dict()}")
+            create_controller.print_item(key)
+            value = create_controller.get_answer()
+            if value.lower() != "x":
+                new_phone.prod[key] = value
+            else:
+                print("Товар не записан")
+                quit()
+        phone_conn.save_prod_2file(new_phone)
+
 
 
 if __name__ == "__main__":

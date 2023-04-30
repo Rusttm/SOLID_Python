@@ -1,4 +1,3 @@
-from MyModels.ProdMainClass import ProdMainClass
 from MyModels.ProdLabelMainClass import ProdLabelMainClass
 
 class PhoneProd(ProdLabelMainClass):
@@ -7,10 +6,22 @@ class PhoneProd(ProdLabelMainClass):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         # print(self.id)
+
         self.id = PhoneProd.id = super().get_prod_id()
         self.prod.update(id=PhoneProd.id)
         self.set_prod_label("brand", "name", "model")
-        # self.prod.update(label=self.get_prod_label())
+        self.req_field = None
+        self.set_requred_fields()
+
+    def set_requred_fields(self, fields_array=None):
+        """ устанавливает список обязательных полей для ввода"""
+        if fields_array is None:
+            fields_array = ["brand", "name", "model", "memory"]
+        self.req_field = fields_array
+
+    def get_requred_fields(self):
+        """ возвращает список обязательных полей для ввода"""
+        return self.req_field
 
 
 
