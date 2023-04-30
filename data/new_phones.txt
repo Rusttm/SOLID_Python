@@ -1,1 +1,2 @@
-label:;id:4;brand:Apple;name:iPhone;model:6s;memory:64;
+label:;id:4;brand:Xiaomi;name:Redmi Note;model:10;memory:128;
+label:Galaxy S22;id:4;brand:Samsung;name:Galaxy;model:S22;memory:256;

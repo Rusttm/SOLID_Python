@@ -9,4 +9,4 @@ class ConSavePhone(SaveConnectorMain):
         append=False перезаписыват файл
         append=True добавляет в файл
         """
-        super().__init__(file_name)
+        super().__init__(file_name, append)
