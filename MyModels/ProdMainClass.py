@@ -1,6 +1,11 @@
 class ProdMainClass(object):
     """ суперкласс для объектов (продуктов)
-    должен уметь выдавать ID"""
+    должен уметь выдавать
+    get_prod_id : ID
+    get_prod_dict: сам продукт в виде словаря
+    get_prod_label: название, которое указывается при инициализации
+
+    """
     id = 0
 
     def __init__(self, **kwargs):
@@ -23,12 +28,16 @@ class ProdMainClass(object):
         """ метод выдает продукт в виде словаря"""
         return self.prod
 
-    def get_prod_label(self, *args):
-        """ метод получает список ключей по которым формируется label
-        возвращает значение label"""
+    def get_prod_label(self):
+        """ возвращает значение label"""
+        return self.prod["label"]
+
+    def set_prod_label(self, *args):
+        """ метод получает список ключей по которым формируется label"""
         label = ""
         if len(args) != 0:
             for key in args:
                 label += str(self.prod[key]) + " "
-        return label
+        self.prod["label"] = label
+
 

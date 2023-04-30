@@ -6,12 +6,11 @@ class PhoneProd(ProdMainClass):
     id = 0
 
     def __init__(self, **kwargs):
-        super().__init__()
+        super().__init__(**kwargs)
         self.id = PhoneProd.id = super().get_prod_id()
         self.prod.update(id=PhoneProd.id)
-        print(self.prod)
-        print(super().get_prod_dict())
-        self.prod.update(label=self.get_prod_label("name", "model", "brand"))
+        self.set_prod_label("brand", "name", "model")
+        self.prod.update(label=self.get_prod_label())
 
 
 
