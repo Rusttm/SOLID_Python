@@ -25,10 +25,10 @@ class MainController(object):
 
         # можно записать один телефон
         phone_conn = ConSavePhone("phones_db.txt")
-        phone_conn.save_prod_2file(phone2)
+        phone_conn.save_prod_2file(phone3)
 
         # или записать массив телефонов
-        phones_array = [phone1, phone2, phone3]
+        phones_array = [phone1, phone2]
         phones_array_conn = ConSavePhonesArray("phones_db.txt")
         phones_array_conn.save_prod_array_2file(phones_array)
 
